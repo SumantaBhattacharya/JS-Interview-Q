@@ -201,6 +201,60 @@ while (numoftotal<=10) {
 
 console.log("Sum of numbers from 1 to 10 using a while loop:", sumOftotal); // Correct sum (55)
 
+// 23. Create a for...of loop to sum the numbers from 1 to 0
 
+let sumofloop = 0;
+for (let i = 0; i <= 10; i++) {
+    sumofloop += i;
+}
+console.log("Sum of numbers from 1 to 10 using a for loop:", sumofloop); // Correct sum (55)
+
+// 24. To create a for...of loop to log each character of the string "JavaScript"
+
+let character_of_the_string = "JavaScript";
+
+for (const element of character_of_the_string) {
+    console.log(element);
+    
+}
+
+// 25. Write a for loop that skips even numbers between 1 and 20
+// check the difference between "==" and "===" these operators
+
+for (let index = 0; index < 21; index++) {
+    if (index % 2 === 0) {// (!(index % 2 === 0)) then console.log(index); or index & 2 !== 0 then console.log(index);
+        continue;
+    }else{
+        console.log(index);
+        
+    }
+}
+
+// 26. Use a do while loop that skips even number between 1 and 20
+
+let num = 1;
+
+do{
+
+    if(num % 2 === 0){
+        // console.log("num", ": ", num );
+
+    }else{
+        console.log("num", ": ", num );
+    }
+
+    num++;
+
+}while (num <= 20);
+
+// 26. Create a for loop that calculates the factorial of 5.
+
+let fact = 1;
+
+for (let i = 5; i > 0; i--) {
+    fact = fact*i;
+}
+
+console.log(fact);
 
 
