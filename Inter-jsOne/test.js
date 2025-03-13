@@ -213,9 +213,8 @@ console.log("Sum of numbers from 1 to 10 using a for loop:", sumofloop); // Corr
 
 let character_of_the_string = "JavaScript";
 
-for (const element of character_of_the_string) {
-    console.log(element);
-    
+for (const [index, element] of Array.from(character_of_the_string).entries()) {
+    console.log(`Index: ${index}, Character: ${element}`);
 }
 
 // 25. Write a for loop that skips even numbers between 1 and 20
@@ -225,7 +224,7 @@ for (let index = 0; index < 21; index++) {
     if (index % 2 === 0) {// (!(index % 2 === 0)) then console.log(index); or index & 2 !== 0 then console.log(index);
         continue;
     }else{
-        console.log(index);
+        console.log("skips even numbers between 1 and 20",index);
         
     }
 }
@@ -240,7 +239,7 @@ do{
         // console.log("num", ": ", num );
 
     }else{
-        console.log("num", ": ", num );
+        console.log("skips even number between 1 and 20", ": ", num );
     }
 
     num++;
@@ -255,6 +254,55 @@ for (let i = 5; i > 0; i--) {
     fact = fact*i;
 }
 
-console.log(fact);
+console.log("Factorial of 5",fact);
+
+//  Write a nested loop to print a 3*3 grid of numbers;
+
+/*
+1 2 3
+4 5 6
+7 8 9
+*/
+
+var hold = 1;
+
+//                -1
+for (let i = 1; i < 4; i++) {// mandatory
+    var str = ""
+    for (let j = 1; j < 4; j++) {// mandatory
+
+        // console.log(j);
+
+        str += `${hold} `
+        hold++
+
+    }
+    console.log(str);
+}
+
+// 28. Use a for loop to reverse an array [1, 2, 3, 4].
+
+let arrOf_integers = [1, 2, 3, 4]
+/*
+for (let i = 0; i < arrOf_integers.length; i++) {
+    for (let j = 0; j < arrOf_integers.length - 1 - i; j++) {
+        let temp = arrOf_integers[j]
+        arrOf_integers[j] = arrOf_integers[j+1]
+        arrOf_integers[j+1] = temp
+    }
+// This code does reverse the array, but accidentally and inefficiently.
+}*/
+
+for (let i = 0; i < arrOf_integers.length / 2; i++) {
+    let temp = arrOf_integers[i];
+    arrOf_integers[i] = arrOf_integers[arrOf_integers.length - 1 - i];
+    arrOf_integers[arrOf_integers.length - 1 - i] = temp;
+}
+
+console.log(arrOf_integers);
+
+// Write a while loop that logs numbers from 1 to 100 devisible by 5.
 
 
+
+// node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
