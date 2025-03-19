@@ -274,10 +274,13 @@ for (let i = 1; i < 4; i++) {// mandatory
         // console.log(j);
 
         str += `${hold} `
+        // str += hold 
+
         hold++
 
     }
-    console.log(str);
+    console.log("str: "+ str )// we could have created a loop for making a space between them.
+    // console.log("str: "+ str + " ");
 }
 
 // 28. Use a for loop to reverse an array [1, 2, 3, 4].
@@ -294,15 +297,79 @@ for (let i = 0; i < arrOf_integers.length; i++) {
 }*/
 
 for (let i = 0; i < arrOf_integers.length / 2; i++) {
-    let temp = arrOf_integers[i];
-    arrOf_integers[i] = arrOf_integers[arrOf_integers.length - 1 - i];
+    let temp = arrOf_integers[i]; // temporary array
+    arrOf_integers[i] = arrOf_integers[arrOf_integers.length - 1 - i];// arrOf_integers.length - 1 is the last element, i is basically symbolising characters/elements so, in this line the last element is coming on the first half so then we need to check for the other ⬅ second last element for that we have to inverse reversely we simply used -i.
     arrOf_integers[arrOf_integers.length - 1 - i] = temp;
-}
+}// the question can be arise here is why did we had to create a temporary variable.
 
 console.log(arrOf_integers);
 
-// Write a while loop that logs numbers from 1 to 100 devisible by 5.
+let arrOf_Integers = [1, 2, 3, 4];
 
+for (let index = 0; index < Math.floor(arrOf_Integers.length / 2); index++) {// Math.floor is optional here
+    const temp = arrOf_Integers[index]; // we created a temporary variable so that we can freely modify the arrOf_Integers which is the original array 
+    // this line will make the last elements come into the first
+    // as you can see we actuallt modified the original array where we taking the elements from the last index
+    // a question can arise here this single line can do it all why do we using of so many lines because this line single handedly reversing the order making the last elements to come in first for example [4, 3, 2, 1]
+    arrOf_Integers[index] = arrOf_Integers[arrOf_Integers.length - index - 1]; // it doesnt make difference whether we take -i or -1 first
+    // and.. here we are making the last element to go in first. It is same as like arrOf_Integers[arrOf_Integers.length - index - 1] = arrOf_Integers[index]. which is completely opposite of the line coming before it.
+    arrOf_Integers[arrOf_Integers.length - index - 1] = temp; // and, then the first elements will come into the last positions
+}// another question might arise is why we deviding the array by 2 we could have simply place the last elements in the first with the single line.
+
+console.log(arrOf_Integers);
+// console.log(arrOf_Integers.reverse);
+
+let ArrOf_Integers = [1, 2, 3, 4];
+
+let Arr_Of_Integers = ArrOf_Integers.reverse();
+console.log(Arr_Of_Integers);
+
+
+// Write a while loop that logs numbers from 1 to 100 devisible by 5.
+let counter = 1;
+while (counter <= 100) {
+
+    // if ((counter / 5).equals(0)) {
+    if (counter % 5 === 0) {// use modulus operator because we want the remainder.
+        console.log(counter);
+        // counter++
+    }
+
+    counter++
+
+}
+
+// 30. Make a for...in loop to iterate over an object and log its keys
+
+var obj = {
+    CapitalLetter_Alphabets: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+    SmallLetter_Alphabets:  ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+    Special_Characters: ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", "|", "\\", ";", ":", "'", "\"", ",", ".", "/", "?", "<", ">", " "],
+    Name: "Sumanta Bhattacharya",
+    Phone_Num: 9957088374,
+    College: {
+        Name: "Maulana Abul Kalam Azad University of Technology",
+        Semester: "VI",
+        Roll_Num: 30001222180,
+        Reg_No: 223001010781
+    },
+};
+
+for (let key in obj) {
+    console.log(key);
+} 
+
+// for (let key in obj.College[Name]) {
+for (let key in obj.College) {
+    /*
+    console.log(key.valueOf()); 
+    console.log(key[Name])
+    console.log(key["*"]);*/
+
+    console.log(key);
+    
+}
 
 
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
+// view "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js" using to command we can see this whole file in the terminal
