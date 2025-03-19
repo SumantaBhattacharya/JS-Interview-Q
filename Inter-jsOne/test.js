@@ -402,6 +402,13 @@ array_of_Top_5_favoriteMovies.unshift("Heropanti")
 
 console.log(array_of_Top_5_favoriteMovies);
 
+// 34. Remove the last element of an array and log the updated array.
+
+array_of_Top_5_favoriteMovies.pop();
+console.log(array_of_Top_5_favoriteMovies);
+
+// 35. Use .slice() to extract the first three element of an array.
+
 
 
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
