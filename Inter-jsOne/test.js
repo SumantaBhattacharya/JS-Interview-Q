@@ -395,5 +395,14 @@ for (const element of array_of_Top_5_favoriteMovies) {
 // 32. Find and log the second element of an array
 console.log("The second element of an array: " + array_of_Top_5_favoriteMovies[1]);
 
+// 33. Add two elements to the start of an array using .unshift()
+
+array_of_Top_5_favoriteMovies.unshift("Koye mil gaya");
+array_of_Top_5_favoriteMovies.unshift("Heropanti")
+
+console.log(array_of_Top_5_favoriteMovies);
+
+
+
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
 // view "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js" using to command we can see this whole file in the terminal
