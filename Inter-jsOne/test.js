@@ -370,6 +370,28 @@ for (let key in obj.College) {
     
 }
 
+// 31. Create an array of your top 5 favorite movies and log it.
+
+let array_of_Top_5_favoriteMovies = ["Krish", "Ra-One", "Sonic hadgehog", "Wild robot", "Lion King", "Avengers", "Gardients of galaxcy"];
+
+/*for (let index = 0; index < array_of_Top_5_favoriteMovies.length; index++) {
+    const element = array_of_Top_5_favoriteMovies[index];
+    console.log(element);
+}*/
+
+/*array_of_Top_5_favoriteMovies.forEach((e)=>{
+    console.log(e);
+})*/
+
+/*for (const element in array_of_Top_5_favoriteMovies) {
+    console.log(element); // it gives the index of the array
+}*/
+
+for (const element of array_of_Top_5_favoriteMovies) {
+    console.log("element: " + element);
+}
+
+// 32. Find 
 
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
 // view "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js" using to command we can see this whole file in the terminal
