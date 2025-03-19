@@ -389,9 +389,11 @@ let array_of_Top_5_favoriteMovies = ["Krish", "Ra-One", "Sonic hadgehog", "Wild 
 
 for (const element of array_of_Top_5_favoriteMovies) {
     console.log("element: " + element);
+
 }
 
-// 32. Find 
+// 32. Find and log the second element of an array
+console.log("The second element of an array: " + array_of_Top_5_favoriteMovies[1]);
 
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
 // view "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js" using to command we can see this whole file in the terminal
