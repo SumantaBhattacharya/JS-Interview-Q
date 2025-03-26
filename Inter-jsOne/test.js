@@ -548,3 +548,115 @@ ArrayOf_integers.forEach(num => {
     console.log(`${num}: ${checkEvenOdd(num)}`);
 });// code defines the checkEvenOdd function and uses it to check the second element of the array and then iterates over all elements of the array to check if they are even or odd.
 
+// 42. Create a function to calculate the areas of a circle with a given radius.
+
+function calculateCircleArea(radius) {
+    // return Math.PI * Math.pow(radius, 2);
+    return (Math.round(Math.PI * radius * radius));// pi r^2 | floor
+}//  It should be applied to the result of the calculation
+
+console.log(calculateCircleArea(5));
+
+// 43. Write a function that accepts an array and returns the sum of its element.
+
+function sumArrayElements(array) {
+
+    var sum = 0;
+    array.forEach((e)=>{
+        sum = sum + e
+    })
+
+    return sum;
+
+}
+
+console.log("the sum of its element: ",sumArrayElements([69, 68, 30001222180, 223001010781, 420, 143]));
+
+
+
+function sumArrayElements(array) {
+    return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+console.log(sumArrayElements([69, 68, 30001222180, 223001010781, 420, 143]));//  It should pass the array as an argument
+console.log(sumArrayElements(ArrayOf_integers));// sumArrayElements function, creates an array ArrayOf_integers, and then logs the sum of its elements to the console using the sumArrayElements function.
+
+// 44. Create a function that checks if a string starts with a specific character
+
+function checkStartsWith(string, character) {
+    // charAt(0) to check if the first character of the string is equal to the specified character. It then logs the result to the console.
+    // return string.charAt(0) === character;// The startsWith method was used instead of charAt(0). The startsWith method checks if the string starts with the specified character, while charAt(0) returns the character at the specified index (in this case, index 0).
+    // return string.startsWith(character);// returns either true or false
+    // return string.startsWith(character.toLowerCase());
+    return string.toLowerCase().startsWith(character.toLowerCase());// converting both string, character to lowercase
+    
+}
+
+console.log(checkStartsWith("JavaScript", "J"));
+console.log(checkStartsWith("JavaScript", "j"));// before it was false
+
+// 45. Write a function to find the maximum of two numbers
+
+function function_to_find_the_maximum_of_two_numbers(One,Two) {
+    
+    if (One > Two) {
+        return One;
+    }else if(One < Two){
+        return Two;
+    }else{
+        return "Both numbers are equal";
+    }
+    // return Math.max(One, Two);
+
+}
+
+console.log(function_to_find_the_maximum_of_two_numbers(69,69));
+
+// 45. Write a function that takes a number and return its factorial.
+function factorialRecursive(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorialRecursive(n - 1);
+    }
+}
+
+console.log("A function that takes a number and return its factorial: ",factorialRecursive(69));
+
+// or 
+
+function A_function_that_takes_a_number_and_return_its_factorial(number) {
+    
+    let factorial_of_a_number = 1;
+
+    for (let i = 1; i <= number ; i++) {
+        factorial_of_a_number = factorial_of_a_number * i
+    }
+
+    return factorial_of_a_number;
+
+}
+
+console.log(A_function_that_takes_a_number_and_return_its_factorial(69));
+/*
+Here's a dry run of the `A_function_that_takes_a_number_and_return_its_factorial` function with the input `69`:
+
+1. Initialize `factorial_of_a_number` to `1`.
+2. Start the loop with `i = 1` and continue until `i <= 69`.
+3. In each iteration, multiply `factorial_of_a_number` by `i`.
+4. After each iteration, increment `i` by `1`.
+5. Repeat steps 3 and 4 until `i` becomes `70`.
+6. Return the final value of `factorial_of_a_number`.
+
+Here's the dry run step by step:
+
+- `i = 1`, `factorial_of_a_number = 1 * 1 = 1`
+- `i = 2`, `factorial_of_a_number = 1 * 2 = 2`
+- `i = 3`, `factorial_of_a_number = 2 * 3 = 6`
+- ...
+- `i = 69`, `factorial_of_a_number = ... * 69`
+
+After running the loop until `i = 69`, the final value of `factorial_of_a_number` will be the factorial of `69`.
+
+To get the exact result, you can run the code in a JavaScript environment or use a calculator. The result will be a very large number.
+*/
