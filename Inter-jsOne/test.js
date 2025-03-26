@@ -526,3 +526,25 @@ ArrayOf_integers.forEach((value)=>{
 arr3.pop();// no changes to the original array
 
 console.log(arr3);
+
+// 41. Write a function to check if a number is even or odd
+// another question of to check all the elements of array t even or odd
+function checkEvenOdd(number) {
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+console.log(checkEvenOdd(90));
+// console.log(checkEvenOdd(ArrayOf_integers));
+console.log(checkEvenOdd(ArrayOf_integers[1]));
+// console.log(checkEvenOdd(ArrayOf_integers[0 : ])); ✖
+// console.log(checkEvenOdd(ArrayOf_integers.*)); ✖
+
+// To check all the elements of the array for even or odd
+ArrayOf_integers.forEach(num => {
+    console.log(`${num}: ${checkEvenOdd(num)}`);
+});// code defines the checkEvenOdd function and uses it to check the second element of the array and then iterates over all elements of the array to check if they are even or odd.
+
