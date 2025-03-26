@@ -285,7 +285,7 @@ for (let i = 1; i < 4; i++) {// mandatory
 
 // 28. Use a for loop to reverse an array [1, 2, 3, 4].
 
-let arrOf_integers = [1, 2, 3, 4]
+let arrOf_integers = [101, 180, 181, 420]
 /*
 for (let i = 0; i < arrOf_integers.length; i++) {
     for (let j = 0; j < arrOf_integers.length - 1 - i; j++) {
@@ -319,7 +319,7 @@ for (let index = 0; index < Math.floor(arrOf_Integers.length / 2); index++) {// 
 console.log(arrOf_Integers);
 // console.log(arrOf_Integers.reverse);
 
-let ArrOf_Integers = [1, 2, 3, 4];
+let ArrOf_Integers = [420, 69, 68, 101, 30001222180, 223001010781];
 
 let Arr_Of_Integers = ArrOf_Integers.reverse();
 console.log(Arr_Of_Integers);
@@ -354,7 +354,7 @@ var obj = {
         Reg_No: 223001010781
     },
 };
-
+// Q. what would i have if i had to iterate over the values not just keys. suppose print each letter of the name 
 for (let key in obj) {
     console.log(key);
 } 
@@ -388,7 +388,7 @@ let array_of_Top_5_favoriteMovies = ["Krish", "Ra-One", "Sonic hadgehog", "Wild 
 }*/
 
 for (const element of array_of_Top_5_favoriteMovies) {
-    console.log("element: " + element);
+    console.log("5 favorite movies: " + element);
 
 }
 
@@ -404,12 +404,125 @@ console.log(array_of_Top_5_favoriteMovies);
 
 // 34. Remove the last element of an array and log the updated array.
 
-array_of_Top_5_favoriteMovies.pop();
-console.log(array_of_Top_5_favoriteMovies);
+// array_of_Top_5_favoriteMovies.pop();
+// console.log("Remove the last element of an array: " + array_of_Top_5_favoriteMovies);
+
+console.log("Remove the last element of an array: " + array_of_Top_5_favoriteMovies.pop());// it actually makes changes in the original array
 
 // 35. Use .slice() to extract the first three element of an array.
 
+// array_of_Top_5_favoriteMovies.slice(0,1)
+// console.log("extract the first three element of an array: " + array_of_Top_5_favoriteMovies);
+
+// array_of_Top_5_favoriteMovies = array_of_Top_5_favoriteMovies.slice(0, -1);
+// console.log("Remove the last element of an array: " + array_of_Top_5_favoriteMovies);
+
+console.log("Extract the first three element of an array: " + array_of_Top_5_favoriteMovies.slice(0, 1));// it does'nt make changes with the original array. 
+// question: suppose we had to slide all the elements 0 to nth term then what how we would have proceed with the code then we would have keep the last index empty
+
+// it just copy the elements and create a seperate array
+console.log(array_of_Top_5_favoriteMovies);
+
+// 36. Find the index of a specific element in an array using .indexOf()
+
+let index_of_a_specific_element_in_an_array = array_of_Top_5_favoriteMovies.indexOf("Ra-One")
+console.log("index of a specific element in an array: " + index_of_a_specific_element_in_an_array);
+
+// 37. Check if a value exists in an array using .includes()
+
+let value_exists_in_an_array = array_of_Top_5_favoriteMovies.includes("Ra-One");
+console.log("value exists in an array: " + value_exists_in_an_array);
+
+// 38. Cobine two arrays using .concat()
+let Cobine_two_arrays = array_of_Top_5_favoriteMovies.concat(ArrOf_Integers)
+console.log("Cobine two arrays" + Cobine_two_arrays );
+
+// console.log(Cobine_two_arrays.Math.set());
+
+// Sort an array of numbers in assending order
+// Q. how to sort in decending order?
+console.log(array_of_Top_5_favoriteMovies.sort()); // it make changes with the actual array
+// console.log("array_of_Top_5_favoriteMovies: " , array_of_Top_5_favoriteMovies);
+
+// console.log( "2/3 ? 0 : 22" + 2/3 ? 0 : 22);
+// array_of_Top_5_favoriteMovies.sort() === true ? console.log("Array is sorted") : console.log("Array is'nt sorted");
+
+let ArrayOf_Integers = [69, 68, 30001222180, 223001010781, 420, 143];
+
+if (ArrayOf_Integers.sort === 1) {
+  // true
+  console.log("Array is already sorted");
+} else {
+  for (let index = 0; index < ArrayOf_Integers.length ; index++) {
+    // const element = array[index];
+    // firstly, we need to check if the array is already sorted or not.
+    for (let j = 0; j < ArrayOf_Integers.length - 1 ; j++) { // we are comaparing here, in the inner loop
+      if (ArrayOf_Integers[j] > ArrayOf_Integers[j + 1]) {
+      let temp = ArrayOf_Integers[j];
+      ArrayOf_Integers[j] = ArrayOf_Integers[j + 1];
+      ArrayOf_Integers[j + 1] = temp;
+      // the outer loop helps the iterate from the first element of the array to the last element of the array.
+      // we would need another loop which would be the inner loop which would check in compareson of two elemenets from the left hand side.
+      // when we do this with just the outer loop, this makes the first comes positioned to the last element of the array.
+      // and, when we just do this with just creating the outer loop with the if condition ArrayOf_Integers[index] > ArrayOf_Integers[index + 1], this makes the largest element placed to last index of the array
+      }
+    }
+  }
+  // console.log("array is not sorted");
+  // use bubble sort
+}
+
+console.log("ArrayOf_Integers: " , ArrayOf_Integers);
+
+let ArrayOf_integers = [69, 68, 30001222180, 223001010781, 420, 143];
+
+if (ArrayOf_integers.sort === 1) {
+    // true
+    console.log("Array is already sorted");
+  } else {
+    for (let index = 0; index < ArrayOf_integers.length - 1 ; index++) {// if we four times sort make the largest elements are the right most side it automatically became sorted we dont need to check for the remaining element.
+      for (let j = 0; j < ArrayOf_integers.length - j - 1 ; j++) { // here we making the optimisation as you see the the largest element is shift to the right most side we dont need to check again so so at each step we will take each step less
+        if (ArrayOf_integers[j] > ArrayOf_integers[j + 1]) {
+        let temp = ArrayOf_integers[j];
+        ArrayOf_integers[j] = ArrayOf_integers[j + 1];
+        ArrayOf_integers[j + 1] = temp;
+        
+        }
+      }
+    }
+    // console.log("array is not sorted");
+    // use bubble sort
+  }
+
+
+console.log("ArrayOf_integers: " , ArrayOf_integers);
 
 
 // node "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js"
 // view "C:\Users\SUDIP BHATTACHARYA\Desktop\JS Interview-Q\Inter-jsOne\test.js" using to command we can see this whole file in the terminal
+
+// reverse/deccending order
+
+// 40. Write a program that creates a copy of an array without mutating the original.
+
+var arr2 = [...ArrayOf_integers];
+console.log("arr2: ", arr2);
+
+
+// or
+
+let ArrOf_integers = ArrayOf_integers.map((e)=>{
+    console.log(e);
+})
+
+// or
+
+var arr3 = [];
+
+ArrayOf_integers.forEach((value)=>{
+    arr3.push(value)
+})
+
+arr3.pop();// no changes to the original array
+
+console.log(arr3);
