@@ -335,94 +335,11 @@ while (counter <= 100) {
 // 30. Make a for...in loop to iterate over an object and log its keys
 
 var obj = {
-  CapitalLetter_Alphabets: [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
+  CapitalLetter_Alphabets: ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
   ],
-  SmallLetter_Alphabets: [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+  SmallLetter_Alphabets: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
   ],
-  Special_Characters: [
-    "!",
-    "@",
-    "#",
-    "$",
-    "%",
-    "^",
-    "&",
-    "*",
-    "(",
-    ")",
-    "-",
-    "_",
-    "+",
-    "=",
-    "[",
-    "]",
-    "{",
-    "}",
-    "|",
-    "\\",
-    ";",
-    ":",
-    "'",
-    '"',
-    ",",
-    ".",
-    "/",
-    "?",
-    "<",
-    ">",
-    " ",
+  Special_Characters: ["!","@","#","$","%","^","&","*","(",")","-","_","+","=","[","]","{","}","|","\\",";",":","'",'"',",",".","/","?","<",">"," ",
   ],
   Name: "Sumanta Bhattacharya",
   Phone_Num: 9957088374,
@@ -926,3 +843,26 @@ function helloWorld() {
 }
 
 helloWorld(); // logs "Hello, World!"
+
+// Big O notation is used to clarify algorithms based on how fast they grow or decline. Big O notation is used to analyze the effeciency of an algorithm as its input approaches infinity, which means that as the size of an input to the algorithm grows, how drastically do the space or time requirements grow with it. For example, let's say that we have a dentist and she takes 30 minutes to treat one patient, As her line of patients increases, the time that it takes for her to treat all of the patients will scale linearly with the number of patients waiting in the line. 
+// This is because it always takes her a constant amount of time to treat each individual patient supoose its 30 minutes. This would give us genearl understanding how how a dentist will take to treat 20 or 20 patients. This is because since we know that the dentist takes a constant amount of time, which is 30 minutes to treat each patient, we can always calculate the time it would take for the dentist to treat any number of patients by multiplying the number patients with the number of time it takes for her to treat an individual person in this case, which is 30 with this in mind we can calculate her efficiency linear. Or in Big O terms big O of n, where n is equal to the number of patients. the time that it would take her work to finsh would scale linearly or proportionally with the number of patients.
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+function linearFunc(arr) {
+  for(let i=0; i <arr.length; i++){
+    console.log(1000 * 100000);// it will always takes same amount of time to calculate this line, therefore this line of code takes constant amount of time. 
+  }
+};
+
+linearFunc(arr); // the input to our function in an array with seven items inside of it. for each of those items, we will log this expression which multiplies 1000 times 100000.
+
+function linearFunction(arr) {
+  for (let i = 0; i < arr.length; i++) {// this function scales linearly or Big O(n). This line of code in the reason why the entire linear function is O of n (O(n)) because as the size of n increases the number of iterations that the for loop must traverse increases as well.
+    console.log(1000 * 100000); // In this function, we have multiple lines that are O(1) but we still priortise the line that is O(n) and ignore O(1) operations.
+    let something = (200000000 * 200000000) / 2;
+    console.log(something);
+  };
+};
+
+linearFunction(arr);
