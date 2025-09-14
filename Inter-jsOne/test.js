@@ -847,7 +847,7 @@ helloWorld(); // logs "Hello, World!"
 // Big O notation is used to clarify algorithms based on how fast they grow or decline. Big O notation is used to analyze the effeciency of an algorithm as its input approaches infinity, which means that as the size of an input to the algorithm grows, how drastically do the space or time requirements grow with it. For example, let's say that we have a dentist and she takes 30 minutes to treat one patient, As her line of patients increases, the time that it takes for her to treat all of the patients will scale linearly with the number of patients waiting in the line. 
 // This is because it always takes her a constant amount of time to treat each individual patient supoose its 30 minutes. This would give us genearl understanding how how a dentist will take to treat 20 or 20 patients. This is because since we know that the dentist takes a constant amount of time, which is 30 minutes to treat each patient, we can always calculate the time it would take for the dentist to treat any number of patients by multiplying the number patients with the number of time it takes for her to treat an individual person in this case, which is 30 with this in mind we can calculate her efficiency linear. Or in Big O terms big O of n, where n is equal to the number of patients. the time that it would take her work to finsh would scale linearly or proportionally with the number of patients.
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
+let linear_arr = [1, 2, 3, 4, 5, 6, 7];
 
 function linearFunc(arr) {
   for(let i=0; i <arr.length; i++){
@@ -855,14 +855,54 @@ function linearFunc(arr) {
   }
 };
 
-linearFunc(arr); // the input to our function in an array with seven items inside of it. for each of those items, we will log this expression which multiplies 1000 times 100000.
+linearFunc(linear_arr); // the input to our function in an array with seven items inside of it. for each of those items, we will log this expression which multiplies 1000 times 100000.
 
 function linearFunction(arr) {
   for (let i = 0; i < arr.length; i++) {// this function scales linearly or Big O(n). This line of code in the reason why the entire linear function is O of n (O(n)) because as the size of n increases the number of iterations that the for loop must traverse increases as well.
     console.log(1000 * 100000); // In this function, we have multiple lines that are O(1) but we still priortise the line that is O(n) and ignore O(1) operations.
-    let something = (200000000 * 200000000) / 2;
-    console.log(something);
+    let something = (200000000 * 200000000) / 2; // if we add the performance of all of these lines up, like so O(n) + O(1) + O(1) + O(1) = O(n) all of the lines of code that are O(1) get cancelled out because the O(n) is the worst performing or highest order part of the function. this is why we ignore contants, because we're actually just eliminating the non dominant items. as a functions, input moves towards infinite, constant become less and less significant.
+    console.log(something);// when evaluating aan algorithm efficientcy, we must takes into consideration the efficiency of each step within the algorithm, we then find the highest order step, or the step that has the worst performance, and priortize it over of the better performing steps. steps that are constant, or that are O(1) or as good as it gets in terms of efficiency. So we always ignore them, unless the entirety of the function is constant, or O(1). And in that case, we would categorise the entire function as constant or O(1)
   };
 };
 
-linearFunction(arr);
+linearFunction(linear_arr);
+
+// A constant is any step that doesnt scale with the input to the function. 
+
+//For example, the time to evaluate the expression does not change with the input because both 100 and 1000 are constants. That is these values are always the same, this expression always results in the same value. And it always takes the same amount of time or constant time to return the same result.
+function constant(arr) {
+  var result = 100 * 1000;// every line of code is actually a function in and of itself 
+  return result;
+}
+
+constant(linear_arr);
+
+// Big O of One is for constant algorithms 
+
+function constantFunc(arr) {// we pass in an array but the function does nothing with the aray. the only operation within the function is constant because it doesnt scale with any input. so regardless of how large of an array is passed to this function, This line always produces the same output.
+  console.log(100 * 100000); // And this is the only line in the function So therefore, the entire function is O(1)
+}
+
+/*
+In Big O, we have growth hirarchy
+
+Order of Growth - this chart show the efficiency categories following in order from good to bad. That is to say that si tosay that this O(1) is the first best case. and And the last one is thw rost case. 
+--------------
+
+O(1)         Constant
+O(log n)     Linear 
+*/
+
+// In big O notation, when determining the efficiency of an algorithm, we only care about the worst case. So that means that the worst case where the highest order operation trumps the operations that have better performance.
+
+//  O(n^2)
+
+function sqaure(n){  
+   for(let i = 0; i < n; i++){ // each side will be same length, for every iteration of this top for loop we're also going to loop thorugh the nested for loop. And this nested for loop i doing the exact same thing that this for loop is doing. It's iterating though every number,  starting from zero up until the number in and within the nested for loop,   
+    for(let j = 0; j < n; j++){ // j will execute 4 times in 4 (0, 1, 2, 3) rows and 4 (0, 1, 2, 3) columns
+      console.log("sqaure: ", "i: " , i , " and" , " j " , j); // exch time, j will execute till 4 then i will be incremented the j will execute again this loop will continue until i runs running.
+    }// forming a matrix we can look at i as columns and j as rows. "row" is line horijontally and "column" is a line vertically
+   }// Area of square = Side length × side length that going to equal number of cells within this matrix that also happens to be the number of times that we have to perform this code. 4 * 4 is 4^2 = 16 cells O(N^2)
+ }
+
+sqaure(4);
