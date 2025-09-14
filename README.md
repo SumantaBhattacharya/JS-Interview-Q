@@ -9,6 +9,8 @@
   - ***For example***, *let's say that we have a dentist and she takes 30 minutes to treat one patient, As her line of patients increases, the time that it takes for her to treat all of the patients will scale linearly with the number of patients waiting in the line. This is because it always takes her a constant amount of time to treat each individual patient supoose its 30 minutes. This would give us general understanding how how a dentist will take to treat 20 or 30 patients. This is because since we know that the dentist takes a constant amount of time, which is 30 minutes to treat each patient, we can always calculate the time it would take for the dentist to treat any number of patients by multiplying the number patients with the number of time it takes for her to treat an individual person in this case, which is 30 with this in mind we can calculate her efficiency linear. Or in Big O terms big O of n, where n is equal to the number of patients. the time that it would take her work to finsh would scale linearly or proportionally with the number of patients*.
 
 `A constant is any step that doesnt scale with the input to the function.`
+> constants are ignored due to getting less priority and gets elimated as its less dominant
+>  as a functions, input moves towards infinite, constant become less and less significant.
 
 > *Big O of One is for constant algorithms*
 
@@ -19,3 +21,5 @@ Order of Growth   |     Description
 ------------------------------------
 O(n!)             |     Factorial
 ```
+
+- *when evaluating aan algorithm efficientcy, we must takes into consideration the efficiency of each step within the algorithm, we then find the highest order step, or the step that has the worst performance, and priortize it over of the better performing steps. steps that are constant, or that are O(1) or as good as it gets in terms of efficiency. So we always ignore them, unless the entirety of the function is constant, or O(1). And in that case, we would categorise the entire function as constant or O(1).* 
