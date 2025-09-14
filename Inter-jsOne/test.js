@@ -909,14 +909,15 @@ sqaure(4);
 
 //  O(N cubed) or O(N^3)
 
+// this cube functiontakes in an argument n which is a number. And it's going to iterate though this foor loop. 
  function cube(n) {// basically, for every iteration this will take the inner nested loops will follow
-    for(let i = 0; i < n; i++){ // for every iteration of this for loop is going to iterate through the entirity of its inner for loop 
-        for(let j = 0; j < n; j++){ // and for every iteration of this for loop will need to iterate though the entirity of inner for loop
-            for(let k = 0; k < n; k++){ 
+    for(let i = 0; i < n; i++){ // for every iteration of this for loop is going to iterate through the entirity of its inner for loop. iterating up until n So, if we pass the number 4 to cube function, we'll end up here at this first for loop. And we're going to iterate starting from zero all the way up until n, whioch is four, Now for all the in cube, we're adding in additional nested for loop. so there's no longer just for a row and a column. Now we have rows, columns. And we also have this third dimension which we will just call height. a three dimensional array. i is going to start off as 0 and this initial for loop is representative of columns. once i becomes four, we're no longer going to iterate through this for loop because i is then no longer less than n, which is four, it will be equal to four.  
+      for(let j = 0; j < n; j++){ // and for every iteration of this for loop will need to iterate though the entirity of inner for loop
+            for(let k = 0; k < n; k++){ // the height would be represented by this k for loop. the rows would be represented by this j for loop. the columns would be represented by this i for loop. So for every iteration of this for loop, we're going to be moving up this k axis.
                 console.log("cube: ", "i: " + i + " and" + " j: " + j + " k: " + k);
             }// i. first the inner most for loop for run 4 times then j will be incremented by 1 then the inner most loop will run again and this cycle will happen until the j becomes 4 the k will execute till Jth 0th iteration j will run 4 time 1th iteration k will run 4 times like this 4 + 4 + 4 + 4 this will result an 4*4 matrix
         }
     }
  }
 
-cube(4);
+cube(4);// to get the volume, the space within this cube 4*4*4 four cubed is 64 And that will be the volume of this cube, which just means that there are 64 of these miniature cubes within this larger cube. And that's the volume. which also happens to be the number of times we would perform this function console log the coordinates that is why this function is O(n) cube

@@ -23,3 +23,106 @@ O(n!)             |     Factorial
 ```
 
 - *when evaluating aan algorithm efficientcy, we must takes into consideration the efficiency of each step within the algorithm, we then find the highest order step, or the step that has the worst performance, and priortize it over of the better performing steps. steps that are constant, or that are O(1) or as good as it gets in terms of efficiency. So we always ignore them, unless the entirety of the function is constant, or O(1). And in that case, we would categorise the entire function as constant or O(1).* 
+
+### ***Dry run of cube function O(n^3) cubic***
+
+```
+
+So for this first iteration of this top level for loop, i is going to  be equal to zero. 
+then for this nested for loop, J is also going to be equal to zero. 
+And for K as well 
+
+since we continue with K until K is no longer less than n, i right now is equal to zero
+
+i = 0, j = 0, k = 0  k increments 1
+i = 0, j = 0, k = 1  k increments 1
+i = 0, j = 0, k = 2  k increments 1
+i = 0, j = 0, k = 3  k increments 1
+i = 0, j = 0, k = 4  k always have to be less than 4 loop ends here for the first j iteration j gets incremented by 1
+
+i = 0, j = 1, k = 0  k increments 1
+i = 0, j = 1, k = 1  k increments 1
+i = 0, j = 1, k = 2  k increments 1
+i = 0, j = 1, k = 3  k increments 1
+i = 0, j = 1, k = 4  k always have to be less than 4 loop ends here for the first j iteration j gets incremented by 1
+
+i = 0, j = 2, k = 0  k increments 1
+i = 0, j = 2, k = 1  k increments 1
+i = 0, j = 2, k = 2  k increments 1
+i = 0, j = 2, k = 3  k increments 1
+i = 0, j = 2, k = 4  k always have to be less than 4 loop ends here for the first j iteration j gets incremented by 1
+
+i = 0, j = 3, k = 0  k increments 1
+i = 0, j = 3, k = 1  k increments 1
+i = 0, j = 3, k = 2  k increments 1
+i = 0, j = 3, k = 3  k increments 1
+i = 0, j = 3, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 0, j = 4 j always have to be less than loop 4 so loop ends here for the first i iteration. i gets incremented by 1
+
+i = 1, j = 0, k = 0  k increments 1
+i = 1, j = 0, k = 1  k increments 1
+i = 1, j = 0, k = 2  k increments 1
+i = 1, j = 0, k = 3  k increments 1
+i = 1, j = 0, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 1, j = 1, k = 0  k increments 1
+i = 1, j = 1, k = 1  k increments 1
+i = 1, j = 1, k = 2  k increments 1
+i = 1, j = 1, k = 3  k increments 1
+i = 1, j = 1, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+
+i = 1, j = 2, k = 0  k increments 1
+i = 1, j = 2, k = 1  k increments 1
+i = 1, j = 2, k = 2  k increments 1
+i = 1, j = 2, k = 3  k increments 1
+i = 1, j = 2, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+
+i = 1, j = 2, k = 0  k increments 1
+i = 1, j = 2, k = 1  k increments 1
+i = 1, j = 2, k = 2  k increments 1
+i = 1, j = 2, k = 3  k increments 1
+i = 1, j = 2, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+
+i = 1, j = 3, k = 0  k increments 1
+i = 1, j = 3, k = 1  k increments 1
+i = 1, j = 3, k = 2  k increments 1
+i = 1, j = 3, k = 3  k increments 1
+i = 1, j = 3, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 1, j = 4 j always have to be less than loop 4 so loop ends here for the second i iteration. i gets incremented by 1
+
+i = 2, j = 0, k = 0  k increments 1
+i = 2, j = 0, k = 1  k increments 1
+i = 2, j = 0, k = 2  k increments 1
+i = 2, j = 0, k = 3  k increments 1
+i = 2, j = 0, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 2, j = 1, k = 0  k increments 1
+i = 2, j = 1, k = 1  k increments 1
+i = 2, j = 1, k = 2  k increments 1
+i = 2, j = 1, k = 3  k increments 1
+i = 2, j = 1, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 2, j = 2, k = 0  k increments 1
+i = 2, j = 2, k = 1  k increments 1
+i = 2, j = 2, k = 2  k increments 1
+i = 2, j = 2, k = 3  k increments 1
+i = 2, j = 2, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 2, j = 3, k = 0  k increments 1
+i = 2, j = 3, k = 1  k increments 1
+i = 2, j = 3, k = 2  k increments 1
+i = 2, j = 3, k = 3  k increments 1
+i = 2, j = 3, k = 4  k always have to be less than loop 4 ends here for the first j iteration j gets incremented by 1
+
+i = 2, j = 4 j always have to be less than loop 4 so loop ends here for the second i iteration. i gets incremented by 1
+
+so on and so on!
+```
+
+visited links
+https://downsub.com/
