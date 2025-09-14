@@ -906,3 +906,17 @@ function sqaure(n){
  }
 
 sqaure(4);
+
+//  O(N cubed) or O(N^3)
+
+ function cube(n) {// basically, for every iteration this will take the inner nested loops will follow
+    for(let i = 0; i < n; i++){ // for every iteration of this for loop is going to iterate through the entirity of its inner for loop 
+        for(let j = 0; j < n; j++){ // and for every iteration of this for loop will need to iterate though the entirity of inner for loop
+            for(let k = 0; k < n; k++){ 
+                console.log("cube: ", "i: " + i + " and" + " j: " + j + " k: " + k);
+            }// i. first the inner most for loop for run 4 times then j will be incremented by 1 then the inner most loop will run again and this cycle will happen until the j becomes 4 the k will execute till Jth 0th iteration j will run 4 time 1th iteration k will run 4 times like this 4 + 4 + 4 + 4 this will result an 4*4 matrix
+        }
+    }
+ }
+
+cube(4);
