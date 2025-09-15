@@ -987,3 +987,32 @@ if (result !== -1) {
 } else {
     console.log("The searched element is not found");
 }
+
+function RecursiveBinarySearch(arr, target, start = 0, end = arr.length - 1) {
+  
+  // base condition
+  if (start > end) {
+    return -1;
+  }
+
+  let mid = Math.floor(start + (end - start) / 2)
+
+  if (target > arr[mid]) {
+    return RecursiveBinarySearch(arr, target, start = mid + 1, end)
+  }else if(target < arr[mid]){
+    return RecursiveBinarySearch(arr, target, start, end = mid - 1)
+  }else{
+    return mid;
+  }
+
+}
+
+let RecursiveBinarySearch_array = [52, 68, 69, 68.8, 440, 481]
+
+let RecursiveBinarySearch_result = RecursiveBinarySearch(RecursiveBinarySearch_array, 68)
+
+if(RecursiveBinarySearch_result !== -1){
+  console.log("RecursiveBinarySearch_result: " , RecursiveBinarySearch_result);
+}else{
+  console.log("The searched element is not found");
+}

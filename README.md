@@ -132,6 +132,9 @@ so on and so on!
 > *Devision is the inverse of multiplication*
 - if we need to multiple 2*2*2 to get 8 then we should also be able to devide 8 by 2 three times to get 1
 
+# ***Binary Search & O(log n)*** 
+- *Any algorithm that repeatedly divides the input size by a constant factor (like 2) has O(log n) time complexity.*
+
 #### ***Learnings***
 - count++ (post-increment): Returns the value first, then increments.
 - ++count (pre-increment): Increments first, then returns the value.
