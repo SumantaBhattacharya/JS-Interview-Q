@@ -953,3 +953,37 @@ function logn(n) {
 }
 
 console.log("logn: ", logn(8)); // O(log 8) is same as order of log base 2 of 8 = 2^3 = 2*2*2 = 8
+
+// Binary Search & O(log n) - Any algorithm that repeatedly divides the input size by a constant factor (like 2) has O(log n) time complexity.
+
+let BinaryS_arr = [51, 68, 69, 440, 480]
+
+function IterativeBinaryS(arr, target) {
+  
+  let start = 0;
+  let end = arr.length - 1;
+
+  while (start <= end) {
+    let mid = Math.floor(start + (end - start) / 2)
+  
+    if (target > arr[mid]) {
+      start = mid +1
+    }else if(target < arr[mid]){
+      end = mid - 1;
+    }else{
+      return mid;
+    }
+
+    return -1;
+
+  }
+
+}
+
+const result = IterativeBinaryS(BinaryS_arr, 69);
+
+if (result !== -1) {
+    console.log(`Value at index ${result}: ${BinaryS_arr[result]}`);
+} else {
+    console.log("The searched element is not found");
+}
