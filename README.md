@@ -130,6 +130,7 @@ so on and so on!
 *In computer science unless specified otherwise, we can always assume that the number that we want to raise to sum power is two.* 
 
 > *Devision is the inverse of multiplication*
+- if we need to multiple 2*2*2 to get 8 then we should also be able to devide 8 by 2 three times to get 1
 
 #### ***Learnings***
 - count++ (post-increment): Returns the value first, then increments.

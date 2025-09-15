@@ -940,3 +940,16 @@ function logFunc(n, count = 0) {// this function time complexity is O(n)
 }
 
 console.log("logFunc: ",logFunc(8));
+
+// O(log n) iterative/non recursive
+
+function logn(n) {
+  let count = 0;// we iterate through this while loop as long n is grater than 1, each iteration of the while loop we are going to devide n by 2 and reassign to n so n is going to be halved for each iteration
+  while (n > 1) {// When n becomes 1, Math.floor(1/2) = 0 > 1 ✖
+    n = Math.floor(n/2)// 8/2 = 4/2 = 2/2 = 1/2 = 0 > 1 ✖
+    count++;
+  }
+  return count;
+}
+
+console.log("logn: ", logn(8)); // O(log 8) is same as order of log base 2 of 8 = 2^3 = 2*2*2 = 8
