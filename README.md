@@ -124,5 +124,16 @@ i = 2, j = 4 j always have to be less than loop 4 so loop ends here for the seco
 so on and so on!
 ```
 
-visited links
-https://downsub.com/
+# ***O(log n)***
+*Simply put a logarithm is the power that a number needs to be raised to get some other number.*
+*number^number = some number - 2^3 = 2*2*2 = 8 - log2(8) log base 2 of 8? = 3*
+*In computer science unless specified otherwise, we can always assume that the number that we want to raise to sum power is two.* 
+
+> *Devision is the inverse of multiplication*
+
+#### ***Learnings***
+- count++ (post-increment): Returns the value first, then increments.
+- ++count (pre-increment): Increments first, then returns the value.
+
+#### ***Visited links***
+- *https://downsub.com/*

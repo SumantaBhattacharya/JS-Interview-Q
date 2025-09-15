@@ -921,3 +921,22 @@ sqaure(4);
  }
 
 cube(4);// to get the volume, the space within this cube 4*4*4 four cubed is 64 And that will be the volume of this cube, which just means that there are 64 of these miniature cubes within this larger cube. And that's the volume. which also happens to be the number of times we would perform this function console log the coordinates that is why this function is O(n) cube
+
+// O(log n)
+// Simply put a logarithm is the power that a number needs to be raised to get some other number. 
+// number^number = some number - 2^3 = 2*2*2 = 8 - log2(8) log base 2 of 8? = 3
+// In computer science unless specified otherwise, we can always assume that the number that we want to raise to sum power is two. 
+
+function logFunc(n, count = 0) {// this function time complexity is O(n)
+  // if(n === 0){
+  if(n <= 1){
+    // return "Done"
+    return count
+  }else{
+    count++;
+    n = Math.floor(n/2);// when we pass a number into this function, it divides in by two or splits it in half,  and then calls itself with the new half or divided number.
+    return logFunc(n, count);// 8/2 = 4, 4/2 = 2, 2/2 = 0, 0===0 ✔ Done
+  }
+}
+
+console.log("logFunc: ",logFunc(8));
