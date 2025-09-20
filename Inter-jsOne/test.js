@@ -991,8 +991,8 @@ if (result !== -1) {
 function RecursiveBinarySearch(arr, target, start = 0, end = arr.length - 1) {
   
   // base condition
-  if (start > end) {
-    return -1;
+  if (start > end) {// if the target is not in the array means it either means that the target is larger than the largest value in the array or its smaller than the smallest value in the array
+    return -1;// So that means our function will keep checking our array until eventually we get to either the largest item if the target is larger than the largest value in the array,  or it gets to the smallest item if the target is smaller than the smallest item in the array. And at that point, the start and the end values will be equal 
   }
 
   let mid = Math.floor(start + (end - start) / 2)
